@@ -35,15 +35,12 @@ class BookListsTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBookDetailsView" {
-            guard let bookDetailsVC = segue.destination as? BookDetailsViewController, let bookIndexPathSelected = tableView.indexPathForSelectedRow else {
-                return
-            }
+            guard let bookDetailsVC = segue.destination as? BookDetailsViewController,
+                  let bookIndexPathSelected = tableView.indexPathForSelectedRow else { return }
             
             bookDetailsVC.book = BooksController.books[bookIndexPathSelected.row]
             
         }
-        
     }
     
-
 }

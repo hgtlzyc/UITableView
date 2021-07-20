@@ -15,7 +15,6 @@ class BookDetailsViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     
-    
     var book: Book?
     
     override func viewDidLoad() {
@@ -28,9 +27,8 @@ class BookDetailsViewController: UIViewController {
         bookTitleLabel.text = book.title
         authorNameLabel.text = book.author
         coverImageOutlet.image = UIImage(named: book.coverImageName)
-        releaseDateLabel.text = "Released: " + Date.getStringFromDate(book.releaseDate)
+        releaseDateLabel.text = "Released: " + book.releaseDate.getStringDescription()
         descriptionTextView.text = book.description
     }
     
-
 }

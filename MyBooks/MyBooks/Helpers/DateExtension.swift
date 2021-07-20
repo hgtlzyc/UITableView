@@ -8,10 +8,12 @@
 import Foundation
 
 
+
+
 extension Date {
     
+    // MARK: - Type Functions
     static func genterateDateFrom(year: Int, month: Int, day: Int) -> Date {
-        
         var dateComponetns = DateComponents()
         dateComponetns.year = year
         dateComponetns.month = month
@@ -23,9 +25,11 @@ extension Date {
         return newDate ?? Date()
     }
     
-    static func getStringFromDate(_ date: Date) -> String {
+    // MARK: - Instance Functions
+    func getStringDescription() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy, MMM d"
-        return formatter.string(from: date)
+        return formatter.string(from: self)
     }
+    
 }
