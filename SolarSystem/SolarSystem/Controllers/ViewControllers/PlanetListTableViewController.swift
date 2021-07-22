@@ -19,7 +19,6 @@ class PlanetListTableViewController: UITableViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-     
     }
 
     // MARK: - Header View
